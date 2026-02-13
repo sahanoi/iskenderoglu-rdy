@@ -1,0 +1,193 @@
+/* Hero Styles - Blueprint Design */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--bg-hero);
+}
+
+.hero-bg-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #0f1729 0%, #1a2332 50%, #0f1729 100%);
+    z-index: 0;
+}
+
+/* Optional: Add subtle pattern overlay */
+.hero-bg-gradient::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(245, 124, 0, 0.05) 0%, transparent 50%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding-top: 6rem;
+    text-align: center;
+}
+
+.hero-text {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    color: var(--white);
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+    color: var(--text-on-dark-secondary);
+    font-size: clamp(0.875rem, 1.5vw, 1.125rem);
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    opacity: 0.9;
+}
+
+/* Search Bar (Blueprint Style) */
+.hero-search-bar {
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 60px;
+    padding: 0.75rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.search-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+    min-width: 0;
+}
+
+.search-icon {
+    color: var(--white);
+    opacity: 0.7;
+    flex-shrink: 0;
+    font-size: 1.125rem;
+}
+
+.search-select {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--white);
+    font-size: 0.95rem;
+    font-family: inherit;
+    cursor: pointer;
+    outline: none;
+    min-width: 0;
+}
+
+.search-select option {
+    background: var(--primary-navy);
+    color: var(--white);
+}
+
+.search-link {
+    color: var(--white);
+    font-size: 0.95rem;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: color var(--transition-fast);
+}
+
+.search-link:hover {
+    color: var(--primary-blue);
+}
+
+.search-divider {
+    width: 1px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    flex-shrink: 0;
+}
+
+.search-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: var(--primary-blue);
+    border-radius: 50%;
+    color: var(--white);
+    flex-shrink: 0;
+    transition: all var(--transition-base);
+}
+
+.search-button:hover {
+    background: var(--primary-blue-dark);
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content {
+        padding-top: 8rem;
+    }
+
+    .hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.75rem;
+        letter-spacing: 0.15em;
+        margin-bottom: 3rem;
+    }
+
+    .hero-search-bar {
+        flex-direction: column;
+        border-radius: 20px;
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+
+    .search-item {
+        width: 100%;
+        padding: 0.75rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+    }
+
+    .search-divider {
+        display: none;
+    }
+
+    .search-button {
+        width: 100%;
+        height: 50px;
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.875rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.7rem;
+    }
+}

@@ -1,0 +1,179 @@
+/* App Styles */
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+  transition: all var(--transition-base);
+}
+
+.navbar-scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  height: 60px;
+  width: auto;
+  transition: height var(--transition-base);
+}
+
+.navbar-scrolled .navbar-logo img {
+  height: 50px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar-links a {
+  font-weight: 500;
+  color: var(--white);
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color var(--transition-fast);
+}
+
+.navbar-scrolled .navbar-links a {
+  color: var(--text-primary);
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-blue);
+  transition: width var(--transition-base);
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+.navbar-cta {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+.navbar-toggle {
+  display: none;
+  color: var(--white);
+  padding: 0.5rem;
+}
+
+.navbar-scrolled .navbar-toggle {
+  color: var(--text-primary);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  box-shadow: var(--shadow-lg);
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 1rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  transition: background var(--transition-fast);
+}
+
+.mobile-menu a:hover {
+  background: var(--gray-100);
+}
+
+.mobile-cta {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* WhatsApp Float */
+.whatsapp-float {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  transition: box-shadow var(--transition-base);
+}
+
+.whatsapp-float:hover {
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-cta {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-logo img {
+    height: 50px;
+  }
+
+  .navbar-scrolled .navbar-logo img {
+    height: 45px;
+  }
+
+  .whatsapp-float {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 55px;
+    height: 55px;
+  }
+}
