@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: linear-gradient(rgba(15, 23, 41, 0.7), rgba(15, 23, 41, 0.8)), url('../assets/turkish-flag.png');
+    background: linear-gradient(rgba(15, 23, 41, 0.6), rgba(15, 23, 41, 0.8));
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
