@@ -33,20 +33,8 @@ const About = () => {
         <section id="hakkimizda" className="section section-alt about">
             <div className="container">
                 <div className="about-content">
-                    {/* Left Side - Image */}
-                    <motion.div
-                        className="about-image"
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        {/* Image removed as per request */}
-                        <div className="about-badge" style={{ position: 'relative', top: 'auto', right: 'auto', left: 'auto', transform: 'none', display: 'inline-flex' }}>
-                            <span className="badge-number">15+</span>
-                            <span className="badge-text">Yıllık Tecrübe</span>
-                        </div>
-                    </motion.div>
+                    {/* Left Side - Image Removed */}
+                    {/* Left Side - Image Removed */}
 
                     {/* Right Side - Text */}
                     <motion.div
