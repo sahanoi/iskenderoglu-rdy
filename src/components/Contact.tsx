@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import type { FormEvent } from 'react';
 import { motion } from 'framer-motion';
-import { FiPhone, FiMail, FiMapPin, FiClock, FiSend } from 'react-icons/fi';
+import { FiPhone, FiMapPin, FiClock, FiSend } from 'react-icons/fi';
 import { FaWhatsapp, FaFacebookF, FaInstagram } from 'react-icons/fa';
 import './Contact.css';
 
@@ -22,24 +22,25 @@ const initialFormData: FormData = {
     message: ''
 };
 
-{
-    icon: <FiPhone size={24} />,
+const contactInfo = [
+    {
+        icon: <FiPhone size={24} />,
         title: 'Telefon (Birincil)',
-            value: '0532 470 35 66',
-                link: 'tel:+905324703566'
-},
-{
-    icon: <FiPhone size={24} />,
+        value: '0532 470 35 66',
+        link: 'tel:+905324703566'
+    },
+    {
+        icon: <FiPhone size={24} />,
         title: 'Telefon (İkincil)',
-            value: '0535 694 39 64',
-                link: 'tel:+905356943964'
-},
-{
-    icon: <FiMapPin size={24} />,
+        value: '0535 694 39 64',
+        link: 'tel:+905356943964'
+    },
+    {
+        icon: <FiMapPin size={24} />,
         title: 'Adres',
-            value: 'Trabzon, Türkiye',
-                link: 'https://maps.google.com/?q=Trabzon,Turkey'
-}
+        value: 'Trabzon, Türkiye',
+        link: 'https://maps.google.com/?q=Trabzon,Turkey'
+    }
 ];
 
 const services = [
@@ -157,7 +158,7 @@ const Contact = () => {
                                 <FaInstagram size={20} />
                             </a>
                             <a
-                                href="https://wa.me/905551234567"
+                                href="https://wa.me/905324703566"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="social-link whatsapp"
