@@ -63,13 +63,7 @@ const projects: Project[] = [
         image: img5,
         description: 'Özel renk dış cephe boyama'
     },
-    {
-        id: 7,
-        title: 'Mor Ev Projesi',
-        category: 'Boya',
-        image: img6,
-        description: 'Komple dış cephe yenileme'
-    }
+
 ];
 
 const categories = ['Tümü', 'Boya', 'Yalıtım', 'Dekorasyon'];
