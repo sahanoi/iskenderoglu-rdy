@@ -1,4 +1,4 @@
-import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
+import { FiPhone, FiMapPin } from 'react-icons/fi';
 import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import './Footer.css';
 
