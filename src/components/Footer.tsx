@@ -90,11 +90,11 @@ const Footer = () => {
                         <ul>
                             <li>
                                 <FiPhone className="footer-icon" />
-                                <a href="tel:+905551234567">+90 555 123 45 67</a>
+                                <a href="tel:+905324703566">0532 470 35 66</a>
                             </li>
                             <li>
-                                <FiMail className="footer-icon" />
-                                <a href="mailto:info@iskenderoglureis.com">info@iskenderoglureis.com</a>
+                                <FiPhone className="footer-icon" />
+                                <a href="tel:+905356943964">0535 694 39 64</a>
                             </li>
                             <li>
                                 <FiMapPin className="footer-icon" />

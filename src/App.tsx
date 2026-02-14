@@ -43,7 +43,7 @@ function App() {
   return (
     <div className="app">
       {/* Navbar */}
-      <motion.nav 
+      <motion.nav
         className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -58,8 +58,8 @@ function App() {
           <ul className="navbar-links">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a 
-                  href={link.href} 
+                <a
+                  href={link.href}
                   onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
                 >
                   {link.label}
@@ -69,13 +69,13 @@ function App() {
           </ul>
 
           {/* CTA Button */}
-          <a href="tel:+905551234567" className="navbar-cta btn btn-primary">
+          <a href="tel:+905324703566" className="navbar-cta btn btn-primary">
             <FiPhone />
             <span>Hemen Ara</span>
           </a>
 
           {/* Mobile Menu Toggle */}
-          <button 
+          <button
             className="navbar-toggle"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
@@ -87,7 +87,7 @@ function App() {
         {/* Mobile Menu */}
         <AnimatePresence>
           {isMenuOpen && (
-            <motion.div 
+            <motion.div
               className="mobile-menu"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
@@ -97,7 +97,7 @@ function App() {
               <ul>
                 {navLinks.map((link) => (
                   <li key={link.href}>
-                    <a 
+                    <a
                       href={link.href}
                       onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
                     >
@@ -127,9 +127,9 @@ function App() {
       <Footer />
 
       {/* Floating WhatsApp Button */}
-      <motion.a 
-        href="https://wa.me/905551234567" 
-        target="_blank" 
+      <motion.a
+        href="https://wa.me/905551234567"
+        target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-float"
         initial={{ scale: 0 }}

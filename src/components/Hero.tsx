@@ -67,7 +67,7 @@ const Hero = () => {
 
                         <div className="search-item">
                             <FaPhone className="search-icon" />
-                            <a href="tel:+905551234567" className="search-link">
+                            <a href="tel:+905324703566" className="search-link">
                                 Hemen Ara
                             </a>
                         </div>
@@ -77,7 +77,7 @@ const Hero = () => {
                         <div className="search-item">
                             <FaWhatsapp className="search-icon" />
                             <a
-                                href="https://wa.me/905551234567"
+                                href="https://wa.me/905324703566"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="search-link"

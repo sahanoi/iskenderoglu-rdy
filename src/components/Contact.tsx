@@ -22,31 +22,24 @@ const initialFormData: FormData = {
     message: ''
 };
 
-const contactInfo = [
-    {
-        icon: <FiPhone size={24} />,
-        title: 'Telefon',
-        value: '+90 555 123 45 67',
-        link: 'tel:+905551234567'
-    },
-    {
-        icon: <FaWhatsapp size={24} />,
-        title: 'WhatsApp',
-        value: '+90 555 123 45 67',
-        link: 'https://wa.me/905551234567'
-    },
-    {
-        icon: <FiMail size={24} />,
-        title: 'E-posta',
-        value: 'info@iskenderoglureis.com',
-        link: 'mailto:info@iskenderoglureis.com'
-    },
-    {
-        icon: <FiMapPin size={24} />,
+{
+    icon: <FiPhone size={24} />,
+        title: 'Telefon (Birincil)',
+            value: '0532 470 35 66',
+                link: 'tel:+905324703566'
+},
+{
+    icon: <FiPhone size={24} />,
+        title: 'Telefon (İkincil)',
+            value: '0535 694 39 64',
+                link: 'tel:+905356943964'
+},
+{
+    icon: <FiMapPin size={24} />,
         title: 'Adres',
-        value: 'Trabzon, Türkiye',
-        link: 'https://maps.google.com/?q=Trabzon,Turkey'
-    }
+            value: 'Trabzon, Türkiye',
+                link: 'https://maps.google.com/?q=Trabzon,Turkey'
+}
 ];
 
 const services = [
