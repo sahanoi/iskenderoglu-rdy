@@ -70,37 +70,10 @@ const categories = ['Tümü', 'Boya', 'Yalıtım', 'Dekorasyon'];
 
 const Gallery = () => {
     const [selectedCategory, setSelectedCategory] = useState('Tümü');
-    const [lightboxOpen, setLightboxOpen] = useState(false);
-    const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
     const filteredProjects = selectedCategory === 'Tümü'
         ? projects
         : projects.filter(p => p.category === selectedCategory);
-
-    const openLightbox = (project: Project) => {
-        setSelectedProject(project);
-        setLightboxOpen(true);
-    };
-
-    const closeLightbox = () => {
-        setLightboxOpen(false);
-        setSelectedProject(null);
-    };
-
-    const navigateProject = (direction: 'prev' | 'next') => {
-        if (!selectedProject) return;
-
-        const currentIndex = filteredProjects.findIndex(p => p.id === selectedProject.id);
-        let newIndex;
-
-        if (direction === 'prev') {
-            newIndex = currentIndex === 0 ? filteredProjects.length - 1 : currentIndex - 1;
-        } else {
-            newIndex = currentIndex === filteredProjects.length - 1 ? 0 : currentIndex + 1;
-        }
-
-        setSelectedProject(filteredProjects[newIndex]);
-    };
 
     return (
         <section id="projeler" className="section section-alt gallery">
@@ -151,14 +124,12 @@ const Gallery = () => {
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.9 }}
                                 transition={{ duration: 0.3, delay: index * 0.05 }}
-                                onClick={() => openLightbox(project)}
                             >
                                 <img src={project.image} alt={project.title} />
                                 <div className="gallery-overlay">
                                     <span className="gallery-category">{project.category}</span>
                                     <h3>{project.title}</h3>
                                     <p>{project.description}</p>
-                                    <span className="gallery-view">Görüntüle →</span>
                                 </div>
                             </motion.div>
                         ))}
@@ -184,58 +155,6 @@ const Gallery = () => {
                     </a>
                 </motion.div>
             </div>
-
-            {/* Lightbox */}
-            <AnimatePresence>
-                {lightboxOpen && selectedProject && (
-                    <motion.div
-                        className="lightbox"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        onClick={closeLightbox}
-                    >
-                        <button className="lightbox-close" onClick={closeLightbox}>
-                            <FiX size={32} />
-                        </button>
-
-                        <button
-                            className="lightbox-nav lightbox-prev"
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                navigateProject('prev');
-                            }}
-                        >
-                            <FiChevronLeft size={32} />
-                        </button>
-
-                        <button
-                            className="lightbox-nav lightbox-next"
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                navigateProject('next');
-                            }}
-                        >
-                            <FiChevronRight size={32} />
-                        </button>
-
-                        <motion.div
-                            className="lightbox-content"
-                            initial={{ scale: 0.9, y: 50 }}
-                            animate={{ scale: 1, y: 0 }}
-                            exit={{ scale: 0.9, y: 50 }}
-                            onClick={(e) => e.stopPropagation()}
-                        >
-                            <img src={selectedProject.image} alt={selectedProject.title} />
-                            <div className="lightbox-info">
-                                <span className="lightbox-category">{selectedProject.category}</span>
-                                <h3>{selectedProject.title}</h3>
-                                <p>{selectedProject.description}</p>
-                            </div>
-                        </motion.div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
         </section>
     );
 };
