@@ -41,11 +41,8 @@ const About = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
-                        <img
-                            src="/images/vehicle_wrap_1770651672895.png"
-                            alt="İskenderoğlu Reis Ekibi"
-                        />
-                        <div className="about-badge">
+                        {/* Image removed as per request */}
+                        <div className="about-badge" style={{ position: 'relative', top: 'auto', right: 'auto', left: 'auto', transform: 'none', display: 'inline-flex' }}>
                             <span className="badge-number">15+</span>
                             <span className="badge-text">Yıllık Tecrübe</span>
                         </div>

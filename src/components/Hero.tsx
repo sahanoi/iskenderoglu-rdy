@@ -86,7 +86,10 @@ const Hero = () => {
                             </a>
                         </div>
 
-                        <button className="search-button">
+                        <button
+                            className="search-button"
+                            onClick={() => document.getElementById('hizmetler')?.scrollIntoView({ behavior: 'smooth' })}
+                        >
                             <FiSearch size={20} />
                         </button>
                     </motion.div>

@@ -43,44 +43,7 @@ const contactInfo = [
     }
 ];
 
-const services = [
-    'Boya - Badana',
-    'Dış Cephe Boyama',
-    'İç Cephe Boyama',
-    'Isı Yalıtımı',
-    'Dış Cephe Mantolama',
-    'Asma Tavan',
-    'Işık Bandı',
-    'Alçıpan İşleri',
-    'Duvar Kağıdı',
-    'Diğer'
-];
-
 const Contact = () => {
-    const [formData, setFormData] = useState<FormData>(initialFormData);
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [isSubmitted, setIsSubmitted] = useState(false);
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
-    };
-
-    const handleSubmit = async (e: FormEvent) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-
-        // Simulate form submission
-        await new Promise(resolve => setTimeout(resolve, 1500));
-
-        setIsSubmitting(false);
-        setIsSubmitted(true);
-        setFormData(initialFormData);
-
-        // Reset success message after 5 seconds
-        setTimeout(() => setIsSubmitted(false), 5000);
-    };
-
     return (
         <section id="iletisim" className="section section-dark contact">
             <div className="container">
@@ -100,12 +63,12 @@ const Contact = () => {
                     </p>
                 </motion.div>
 
-                <div className="contact-content">
+                <div className="contact-content-centered">
                     {/* Contact Info */}
                     <motion.div
-                        className="contact-info"
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        className="contact-info-full"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
@@ -166,115 +129,6 @@ const Contact = () => {
                                 <FaWhatsapp size={20} />
                             </a>
                         </div>
-                    </motion.div>
-
-                    {/* Contact Form */}
-                    <motion.div
-                        className="contact-form-wrapper"
-                        initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        <form onSubmit={handleSubmit} className="contact-form">
-                            <h3>Ücretsiz Teklif Alın</h3>
-
-                            {isSubmitted && (
-                                <motion.div
-                                    className="form-success"
-                                    initial={{ opacity: 0, y: -10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                >
-                                    ✓ Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.
-                                </motion.div>
-                            )}
-
-                            <div className="form-row">
-                                <div className="form-group">
-                                    <label htmlFor="name">Adınız Soyadınız *</label>
-                                    <input
-                                        type="text"
-                                        id="name"
-                                        name="name"
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                        required
-                                        placeholder="Adınız Soyadınız"
-                                    />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="phone">Telefon *</label>
-                                    <input
-                                        type="tel"
-                                        id="phone"
-                                        name="phone"
-                                        value={formData.phone}
-                                        onChange={handleChange}
-                                        required
-                                        placeholder="0555 123 45 67"
-                                    />
-                                </div>
-                            </div>
-
-                            <div className="form-row">
-                                <div className="form-group">
-                                    <label htmlFor="email">E-posta</label>
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        name="email"
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                        placeholder="ornek@email.com"
-                                    />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="service">Hizmet Türü *</label>
-                                    <select
-                                        id="service"
-                                        name="service"
-                                        value={formData.service}
-                                        onChange={handleChange}
-                                        required
-                                    >
-                                        <option value="">Seçiniz</option>
-                                        {services.map((service, index) => (
-                                            <option key={index} value={service}>{service}</option>
-                                        ))}
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div className="form-group">
-                                <label htmlFor="message">Mesajınız *</label>
-                                <textarea
-                                    id="message"
-                                    name="message"
-                                    value={formData.message}
-                                    onChange={handleChange}
-                                    required
-                                    rows={5}
-                                    placeholder="Projeniz hakkında bilgi verin..."
-                                />
-                            </div>
-
-                            <motion.button
-                                type="submit"
-                                className="btn btn-primary form-submit"
-                                disabled={isSubmitting}
-                                whileHover={{ scale: 1.02 }}
-                                whileTap={{ scale: 0.98 }}
-                            >
-                                {isSubmitting ? (
-                                    <span>Gönderiliyor...</span>
-                                ) : (
-                                    <>
-                                        <FiSend />
-                                        <span>Gönder</span>
-                                    </>
-                                )}
-                            </motion.button>
-                        </form>
                     </motion.div>
                 </div>
             </div>
