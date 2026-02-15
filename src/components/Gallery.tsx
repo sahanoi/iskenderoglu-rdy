@@ -8,7 +8,7 @@ import img1 from '../assets/1.jpg';
 import img2 from '../assets/2.jpg';
 import img3 from '../assets/3.jpg';
 import img4 from '../assets/4.jpg';
-import img5 from '../assets/5.jpg';
+
 import img6 from '../assets/6.jpg';
 import img7 from '../assets/7.jpg';
 
@@ -55,13 +55,6 @@ const projects: Project[] = [
         category: 'Yalıtım',
         image: img7,
         description: 'Isı yalıtım mantolama sistemi'
-    },
-    {
-        id: 6,
-        title: 'Pembe Ev Boyama',
-        category: 'Boya',
-        image: img5,
-        description: 'Özel renk dış cephe boyama'
     },
 
 ];
@@ -125,7 +118,9 @@ const Gallery = () => {
                                 exit={{ opacity: 0, scale: 0.9 }}
                                 transition={{ duration: 0.3, delay: index * 0.05 }}
                             >
-                                <img src={project.image} alt={project.title} />
+                                <div className="gallery-image">
+                                    <img src={project.image} alt={project.title} />
+                                </div>
                                 <div className="gallery-overlay">
                                     <span className="gallery-category">{project.category}</span>
                                     <h3>{project.title}</h3>
