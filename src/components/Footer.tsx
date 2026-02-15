@@ -1,6 +1,6 @@
 import { FiPhone, FiMapPin } from 'react-icons/fi';
 import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
-import logo from '../assets/logo-new.png';
+import logo from '../assets/logo-rmb.png';
 import './Footer.css';
 
 const Footer = () => {

@@ -4,7 +4,7 @@ import { FiMenu, FiX, FiPhone } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 import './App.css';
 
-import logo from './assets/logo-new.png';
+import logo from './assets/logo-rmb.png';
 
 // Component imports
 import Hero from './components/Hero';
