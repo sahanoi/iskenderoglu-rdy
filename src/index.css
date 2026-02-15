@@ -29,15 +29,15 @@
   --gray-900: #0f172a;
 
   /* Background Colors */
-  --bg-primary: var(--white);
-  --bg-secondary: var(--gray-50);
-  --bg-dark: var(--primary-navy);
+  --bg-primary: var(--primary-navy);
+  --bg-secondary: var(--primary-navy-light);
+  --bg-dark: var(--primary-navy-dark);
   --bg-hero: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
 
   /* Text Colors */
-  --text-primary: var(--gray-900);
-  --text-secondary: var(--gray-600);
-  --text-muted: var(--gray-400);
+  --text-primary: var(--white);
+  --text-secondary: var(--gray-300);
+  --text-muted: var(--gray-500);
   --text-on-dark: var(--white);
   --text-on-dark-secondary: rgba(255, 255, 255, 0.8);
 
@@ -167,8 +167,12 @@ button {
   color: var(--white);
 }
 
+.section-dark h1,
 .section-dark h2,
 .section-dark h3,
+.section-dark h4,
+.section-dark h5,
+.section-dark h6,
 .section-dark p {
   color: var(--white);
 }

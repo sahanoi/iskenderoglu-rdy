@@ -50,7 +50,7 @@ const services = [
 
 const Services = () => {
     return (
-        <section id="hizmetler" className="section services">
+        <section id="hizmetler" className="section section-dark services">
             <div className="container">
                 {/* Section Header */}
                 <motion.div
