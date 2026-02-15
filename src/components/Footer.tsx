@@ -1,5 +1,6 @@
 import { FiPhone, FiMapPin } from 'react-icons/fi';
 import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import logo from '../assets/logo-new.png';
 import './Footer.css';
 
 const Footer = () => {
@@ -29,9 +30,10 @@ const Footer = () => {
                     {/* Company Info */}
                     <div className="footer-brand">
                         <img
-                            src="/images/iskenderoglu_logo_1770651419961.png"
+                            src={logo}
                             alt="İskenderoğlu Reis"
                             className="footer-logo"
+                            style={{ borderRadius: '50%' }}
                         />
                         <p>
                             Trabzon'un güvenilir dekorasyon ve yalıtım firması.

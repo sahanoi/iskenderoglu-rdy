@@ -24,42 +24,42 @@ const projects: Project[] = [
     {
         id: 1,
         title: 'Dış Cephe Boyama',
-        category: 'Boya',
+        category: 'Dış Cephe',
         image: img1,
         description: 'Modern dış cephe boya uygulaması'
     },
     {
         id: 2,
         title: 'Villa Dış Cephe',
-        category: 'Boya',
+        category: 'Dış Cephe',
         image: img2,
         description: 'Villa dış cephe boya ve badana'
     },
     {
         id: 3,
         title: 'Lüks Konut Boyama',
-        category: 'Boya',
+        category: 'Dış Cephe',
         image: img3,
         description: 'Modern konut dış cephe boyama'
     },
     {
         id: 4,
-        title: 'Asma Tavan Uygulaması',
-        category: 'Dekorasyon',
+        title: 'Merdiven Boyama',
+        category: 'Boya',
         image: img4,
-        description: 'Dekoratif asma tavan ve ışık bandı'
+        description: 'Merdiven boşluğu boya ve onarım'
     },
     {
         id: 5,
         title: 'Dış Cephe Mantolama',
-        category: 'Yalıtım',
+        category: 'Mantolama',
         image: img7,
         description: 'Isı yalıtım mantolama sistemi'
     },
 
 ];
 
-const categories = ['Tümü', 'Boya', 'Yalıtım', 'Dekorasyon'];
+const categories = ['Tümü', 'Boya', 'Dış Cephe', 'Mantolama', 'Dekorasyon', 'Yalıtım'];
 
 const Gallery = () => {
     const [selectedCategory, setSelectedCategory] = useState('Tümü');

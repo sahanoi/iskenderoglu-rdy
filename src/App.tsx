@@ -4,6 +4,8 @@ import { FiMenu, FiX, FiPhone } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 import './App.css';
 
+import logo from './assets/logo-new.png';
+
 // Component imports
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -51,7 +53,7 @@ function App() {
       >
         <div className="container navbar-container">
           <a href="#anasayfa" className="navbar-logo" onClick={(e) => { e.preventDefault(); scrollToSection('#anasayfa'); }}>
-            <img src="/images/iskenderoglu_logo_1770651419961.png" alt="İskenderoğlu Reis" />
+            <img src={logo} alt="İskenderoğlu Reis" style={{ borderRadius: '50%' }} />
           </a>
 
           {/* Desktop Navigation */}

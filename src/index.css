@@ -4,16 +4,16 @@
 
 /* CSS Variables */
 :root {
-  /* Primary Colors - Dark Theme */
-  --primary-navy: #0f1729;
-  --primary-navy-light: #1a2332;
-  --primary-navy-dark: #0a0f1a;
-  --primary-blue: #2563eb;
-  --primary-blue-dark: #1e40af;
-  --primary-blue-light: #3b82f6;
-  --accent-blue: #60a5fa;
-  --accent-blue-light: #93c5fd;
-  --accent-blue-dark: #3b82f6;
+  /* Primary Colors - Black & Yellow Theme */
+  --primary-navy: #111111;
+  --primary-navy-light: #1a1a1a;
+  --primary-navy-dark: #000000;
+  --primary-blue: #facc15;
+  --primary-blue-dark: #eab308;
+  --primary-blue-light: #fde047;
+  --accent-blue: #fcd34d;
+  --accent-blue-light: #fef08a;
+  --accent-blue-dark: #ca8a04;
 
   /* Neutral Colors */
   --white: #ffffff;
@@ -32,14 +32,14 @@
   --bg-primary: var(--white);
   --bg-secondary: var(--gray-50);
   --bg-dark: var(--primary-navy);
-  --bg-hero: linear-gradient(135deg, #0f1729 0%, #1a2332 100%);
+  --bg-hero: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
 
   /* Text Colors */
   --text-primary: var(--gray-900);
   --text-secondary: var(--gray-600);
   --text-muted: var(--gray-400);
   --text-on-dark: var(--white);
-  --text-on-dark-secondary: rgba(255, 255, 255, 0.7);
+  --text-on-dark-secondary: rgba(255, 255, 255, 0.8);
 
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -416,5 +416,5 @@ button {
 /* Selection */
 ::selection {
   background: var(--primary-blue);
-  color: var(--white);
+  color: var(--primary-navy);
 }
