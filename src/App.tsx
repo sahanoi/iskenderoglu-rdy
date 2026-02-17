@@ -13,6 +13,7 @@ import Gallery from './components/Gallery';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import BuildingSimulator from './components/BuildingSimulator';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,6 +31,7 @@ function App() {
     { href: '#anasayfa', label: 'Ana Sayfa' },
     { href: '#hizmetler', label: 'Hizmetlerimiz' },
     { href: '#projeler', label: 'Projelerimiz' },
+    { href: '#simulasyon', label: 'Simülasyon' },
     { href: '#hakkimizda', label: 'Hakkımızda' },
     { href: '#iletisim', label: 'İletişim' },
   ];
@@ -122,6 +124,7 @@ function App() {
         <Hero />
         <Services />
         <Gallery />
+        <BuildingSimulator />
         <About />
         <Contact />
       </main>
