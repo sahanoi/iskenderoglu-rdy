@@ -108,7 +108,7 @@ function App() {
                   </li>
                 ))}
               </ul>
-              <a href="tel:+905551234567" className="btn btn-primary mobile-cta">
+              <a href="tel:+905324703566" className="btn btn-primary mobile-cta">
                 <FiPhone />
                 <span>Hemen Ara</span>
               </a>
@@ -130,7 +130,7 @@ function App() {
 
       {/* Floating WhatsApp Button */}
       <motion.a
-        href="https://wa.me/905551234567"
+        href="https://wa.me/905324703566"
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-float"
