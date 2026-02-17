@@ -86,7 +86,7 @@
     justify-content: center;
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, rgba(26, 95, 122, 0.1), rgba(26, 95, 122, 0.05));
+    background: linear-gradient(135deg, rgba(250, 204, 21, 0.1), rgba(250, 204, 21, 0.05));
     color: var(--primary-blue);
     border-radius: var(--radius-lg);
     margin-bottom: 1rem;
